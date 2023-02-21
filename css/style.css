@@ -1,0 +1,35 @@
+body {
+    background-image: url(images/math-bg.jpg);
+    background-size: contain;
+}
+
+button, #display-input {
+    box-shadow: grey 0px 5px 5px;
+}
+
+section {
+    /* backdrop-filter: blur(1px); */
+    z-index: calc(-1);
+}
+
+.calculator {
+
+    background-color: #ecf0f1;
+    box-shadow: gray 0px 5px 7px;
+
+}
+
+
+/* Input feild */
+
+#display-input {
+    /* pointer-events: none; */
+    text-align: end !important;
+    font-size: medium;
+    pointer-events: none;
+}
+
+/* Action buttons */
+.btn-success {
+    font-weight: 700 !important;
+}
