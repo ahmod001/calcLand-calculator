@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!--for Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- custom CSS added here -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Calculator -->
+    <section data-aos="zoom-in" data-aos-duration="700" class="d-flex justify-content-center min-vh-100">
+        <div class="calculator  rounded p-3 my-auto h-75 mx-3">
+
+            <!-- Display -->
+            <div class="display-input bg-secondary bg-opacity-75 rounded p-2 ">
+                <input id="display-input" placeholder="0" class="form-control" value="" type="text">
+            </div>
+            <!-- Buttons here -->
+            <div>
+                <!--delete button here-->
+                <div class=" mt-3 mb-2">
+                    <button id="btn-action-C" class="btn btn-danger mb-1 py-1 px-3">C</button>
+
+                </div>
+
+                <!-- 7, 8, 9, / -->
+                <div class="row row-cols-4">
+                    <div class="col"><button id="btn-7" value="7" class="btn btn-secondary shadow px-3">7</button></div>
+                    <div class="col"><button id="btn-8" value="8" class="btn btn-secondary shadow px-3">8</button></div>
+                    <div class="col"><button id="btn-9" value="9" class="btn btn-secondary px-3">9</button></div>
+                    <div class="col"><button id="btn-action-divide" value=" / " class="btn-success btn px-3">/</button>
+                    </div>
+                </div>
+
+                <!-- 4, 5, 6, X -->
+                <div class="row row-cols-4 my-2">
+                    <div class="col"><button id="btn-4" value="4" class="btn btn-secondary px-3 ">4</button></div>
+                    <div class="col"><button id="btn-5" value="5" class="btn btn-secondary px-3">5</button></div>
+                    <div class="col"><button id="btn-6" value="6" class="btn btn-secondary px-3">6</button></div>
+                    <div class="col"><button id="btn-action-multiply" value=" * "
+                            class="btn btn-success px-3">x</button>
+                    </div>
+                </div>
+                <!-- 1, 2, 3, - -->
+                <div class="row row-cols-4">
+                    <div class="col"><button id="btn-1" value="1" class="btn btn-secondary px-3 ">1</button></div>
+                    <div class="col"><button id="btn-2" value="2" class="btn btn-secondary px-3">2</button></div>
+                    <div class="col"><button id="btn-3" value="3" class="btn btn-secondary px-3">3</button></div>
+                    <div class="col"><button id="btn-action-minus" value=" - " class="btn btn-success px-3">–</button>
+                    </div>
+                </div>
+
+                <!-- 0, (.), +, = -->
+                <div class="row row-cols-4 my-3">
+                    <div class="col"><button id="btn-0" value="0" class="btn btn-secondary px-3">0</button></div>
+                    <div class="col"><button id="btn-point" value="." class="btn btn-secondary px-3">•</button></div>
+                    <div class="col"><button id="btn-action-plus" value=" + " class="btn btn-success px-3">+</button>
+                    </div>
+                    <div class="col"><button id="btn-action-equal" class="btn btn-secondary px-3">=</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--for Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS added here -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
