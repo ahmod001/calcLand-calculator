@@ -17,10 +17,10 @@ document.getElementById('nav-bar').innerHTML = `
                     <a class="nav-link" href="base-calc.html">Base Converter</a>
                 </li>
                 <li class="nav-item  mx-2">
-                    <a class="nav-link" href="#">Age Calculator</a>
+                    <a class="nav-link" href="age-calc.html">Age Calculator</a>
                 </li>
                 <li class="nav-item  mx-2">
-                    <a class="nav-link" href="#">Land Calculator</a>
+                    <a class="nav-link" href="area-calc.html">Area Calculator</a>
                 </li>
 
                 <li class="nav-item mx-2">
