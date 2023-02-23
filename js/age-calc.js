@@ -20,9 +20,7 @@ const countAgeBtn = document.getElementById('count-age').addEventListener('click
         const ageInYears = ageInMonths / 12;
 
         // DOM
-        document.getElementById('age').innerHTML = `<p><strong class="text-secondary">${ageInYears.toFixed(1)}</strong> Years |
-        <strong class="text-secondary">${Math.floor(ageInMonths)}</strong> Months | <strong
-        class="text-secondary">${Math.floor(ageInDays)}</strong> Days</p>`;
+        document.getElementById('age').innerHTML = `<p><strong class="text-secondary">${Number.parseInt(ageInYears)}</strong> Years </p>`;
 
     } else {
         alert('error!')
