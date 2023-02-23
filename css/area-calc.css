@@ -1,0 +1,21 @@
+body{
+    overflow: hidden;
+}
+.area-section {
+    /* backdrop-filter: blur(1px); */
+    z-index: calc(-1);
+    background-image: url(images/math-bg.jpg);
+    background-size: contain;
+    background-repeat:repeat;
+}
+.base-prompt {
+
+    background-color: #ecf0f1;
+    box-shadow: gray 0px 5px 7px;
+
+}
+
+label {
+    font-weight: 500;
+    padding: 7px;
+}
