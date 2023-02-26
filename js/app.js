@@ -38,7 +38,8 @@ const cutEverythingBtn = buttonEvent('btn-action-C', true);
 
 // EQUAL Btn
 document.getElementById('btn-action-equal').addEventListener('click', () => {
-    inputDisplay.value = eval(inputDisplay.value);
+    let input = inputDisplay.value;
+    const condition = inputDisplay.value != '' ? inputDisplay.value = eval(inputDisplay.value) : alert('Please, Enter an expression');
 })
 
 

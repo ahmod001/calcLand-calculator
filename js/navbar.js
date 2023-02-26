@@ -1,6 +1,6 @@
 // Navbar ===
 
-document.getElementById('nav-bar').innerHTML = ` 
+document.getElementById('nav-bar').innerHTML = `
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand px-xl-3" href="#">Calc<span class="text-primary">Land</span></a>
@@ -13,7 +13,7 @@ document.getElementById('nav-bar').innerHTML = `
                 <li class="nav-item mx-2">
                     <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                 </li>
-                <li class="nav-item  mx-2">
+                <li class="nav-item mx-2">
                     <a class="nav-link" href="base-calc.html">Base Converter</a>
                 </li>
                 <li class="nav-item  mx-2">

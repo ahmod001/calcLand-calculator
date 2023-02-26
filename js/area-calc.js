@@ -12,8 +12,10 @@ const measureBtn = document.getElementById('measure-btn').addEventListener('clic
 
         const condition = inputMeasureUnit == 1 ?  result.value = (Number.parseInt(inputValue) * 0.00024710538).toFixed(1) : result.value = (Number.parseInt(inputValue) * 2.47105).toFixed(1);
     } 
-    else {
-        alert('Invalid number')
+    else if( inputValue < 0){
+        alert('Negative values are not eligible')
+    }else {
+        alert('Please, enter a number!')
     }
 
 })
