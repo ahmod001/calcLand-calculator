@@ -33,16 +33,16 @@
             </div>
             <!-- Area input -->
             <label for="area-size-input">Area :</label>
-            <div class="pb-3 row">
+            <div class="pb-3 row" data-aos="zoom-in" data-aos-delay="120">
                 <div class="col-9">
-                    <input id="area-size-input" placeholder="Enter total area size " class="form-control" type="number">
+                    <input data-aos="zoom-in" data-aos-delay="120" id="area-size-input" placeholder="Enter total area size " class="form-control" type="number">
                 </div>
                 <!-- Input unit -->
                 <div class="col-3">
-                    <select id="measure-unit-selected" class="form-select form-select-md mb-3"
+                    <select id="measure-unit-selected" data-aos="zoom-in" data-aos-delay="120" class="form-select form-select-md mb-3"
                         aria-label="form-select-lg example">
                         <option value="1">m²</option>
-                        <option value="2">hactor</option>
+                        <option value="2">hector</option>
                     </select>
 
                 </div>
@@ -52,14 +52,21 @@
             <div class="pb-4">
                 <div>
                     <label for="acres-prompt">To Acres :</label>
-                    <input placeholder="Enter area size to get result" id="acres-prompt" class="form-control"
-                        type="text">
+                    <div class="row">
+                        <div class="col-9">
+                            <input data-aos="zoom-in" data-aos-delay="120" placeholder="Enter area size to get result" id="acres-prompt" class="form-control"
+                                type="text">
+                        </div>
+                        <div  class="col-3 text-center">
+                            <button data-aos="zoom-in" data-aos-delay="120" onclick="copyBtnEvent('acres-prompt')" class="btn btn-secondary px-4">Copy</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Measure btn -->
             <div class="d-flex justify-content-center">
-                <button id="measure-btn" class="btn btn-primary"><strong>Measure</strong></button>
+                <button data-aos="zoom-in" data-aos-delay="120" id="measure-btn" class="btn btn-primary"><strong>Measure</strong></button>
             </div>
         </div>
         </div>
@@ -74,6 +81,8 @@
 
     <!-- Custom JS added here -->
     <script src="js/area-calc.js"></script>
+    <!-- for copy button event -->
+    <script src="js/base-calc.js"></script>
 </body>
 
 </html>

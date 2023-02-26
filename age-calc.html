@@ -24,18 +24,20 @@
     </section>
 
     <!-- Age Calculator -->
-    <section class="min-vh-100 age-calculate-section">
+    <section class=" px-2 age-calculate-section">
 
-        <div class="row d-flex justify-content-center align-items-end pt-5 " style="min-height: 70vh;">
+        <div class="row min-vh-100">
             <!--Date of birth prompt -->
-            <div data-aos="zoom-in" class="col-xl-6 col-lg-8 col-md-9 col-sm-10 col-12">
-                <div class="age-prompt rounded px-4 py-4">
+            <div data-aos="zoom-in"
+                class="px-4 px-lg-4 px-xl-5 col-12 col-sm-11 col-md-10 col-lg-6 d-flex align-items-center mx-auto">
+                
+                <div class="age-prompt rounded w-100 mx-auto px-5 py-4">
                     <div class="pb-5">
                         <h3 class="text-primary text-center">Age calculator</h3>
                     </div>
+
                     <h6>Date of Birth :</h6>
                     <div class="row pt-1">
-
                         <!-- Date -->
                         <div class="col-4 px-1" data-aos="zoom-in" data-aos-delay="120">
                             <div>
@@ -108,18 +110,19 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="text-center py-5" data-aos="zoom-in" data-aos-delay="150">
-                        <button id="count-age" class="btn btn-primary">Count</button>
+                        <button id="count-age" class="btn btn-primary">Calculate</button>
                     </div>
                 </div>
             </div>
+            <!-- Age result -->
+            <div id="age-result-row" class="col-12 col-sm-11 col-md-10 col-lg-6
+              py-2 mx-auto d-flex align-items-center py-5" style="display: none !important;">
+                <div id="age" class="w-100 text-center mx-auto py-3 px-3">
+                </div>
+            </div>
         </div>
-
-        <!-- Age result -->
-        <div id="age" class=" text-center py-3 d-flex justify-content-center py-4
-        px-xl-3 px-2">
-        </div>
-
     </section>
 
     <!-- Bootstrap JS -->
@@ -127,7 +130,8 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <!-- PDF -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
     <!--for Animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -136,4 +140,3 @@
 </body>
 
 </html>
-<button ></button>

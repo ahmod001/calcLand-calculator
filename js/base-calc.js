@@ -2,13 +2,12 @@
 
 //  Global variables
 const title = document.getElementById('title');
-const decimalInput = document.getElementById('decimal-input');
+let decimalInput = document.getElementById('decimal-input');
 const baseSelectPrompt = document.getElementById('base-input');
-const result = document.getElementById('result');
-const resetBtn = document.getElementById('reset-btn');
+const convertBase = document.getElementById('convertBase');
 
 // CONVERT Btn event===
-document.getElementById('convert-btn').addEventListener('click', () => {
+const convertBtnEvent = () => {
     const decimal = parseInt(decimalInput.value);
     const baseSelected = document.getElementById('base-selected').value;
     let convertedValue = 'Error!';
@@ -17,33 +16,65 @@ document.getElementById('convert-btn').addEventListener('click', () => {
     const condition = baseSelected == 1 ? convertedValue = decimal.toString(2) : baseSelected == 2 ? convertedValue = decimal.toString(8) : baseSelected == 3 ? convertedValue = decimal.toString(16) : false;
 
     // Change the prompt
-    baseSelectPrompt.style.display = 'none';
-    result.style.display = 'block';
-    document.getElementById('convert-btn').style.display = 'none';
-    resetBtn.style.display = 'block';
+    if (decimalInput.value >= 0 && decimalInput.value != '') {
+        convertBase.innerHTML = ` 
+            <button data-aos="zoom-in" onclick="resetBtnEvent()" class="btn btn-warning mt-2 px-4"><strong>Reset</strong></button>`
 
-    // DOM
-    title.innerHTML = `<h3 class="text-center">Base <span class ="text-primary ">converted</span></h3>`;
-    document.getElementById('result-prompt').value = convertedValue;
-})
+        baseSelectPrompt.innerHTML = `
+    <div class="py-2" data-aos="zoom-in" data-aos-delay="10"><label for="base">Result :</label>
+    <div class="row">
+    <div class="col-10"><input id="result-prompt" class="form-control" type="text"></div>
+    <div class="col-2"><button onclick="copyBtnEvent('result-prompt')" class="btn btn-secondary ">Copy</button></div>
+    </div>`
+
+        // DOM
+        title.innerHTML = `<h3 class="text-center">Base <span class ="text-primary ">converted</span></h3>`;
+        document.getElementById('result-prompt').value = convertedValue;
+
+    }
+    else if (decimalInput.value < 0) {
+        alert('Negative numbers are not eligible')
+    }
+    else {
+        alert('Please, enter a number')
+    }
+}
+
+// Copy-Text function here===
+const copyBtnEvent = (id) => {
+    const copyText = document.getElementById(id);
+
+    if (copyText.value != '' && copyText.value >= 0) {
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+
+        alert("Copied");
+    }
+}
 
 // RESET Btn event===
-
-resetBtn.addEventListener('click', () => {
-
+const resetBtnEvent = () => {
     // Default Prompt
-    baseSelectPrompt.style.display = 'block';
-    result.style.display = 'none';
-    document.getElementById('convert-btn').style.display = 'block';
-    resetBtn.style.display = 'none';
     decimalInput.value = '';
 
     // DOM reset
     title.innerHTML = `<h3 class="text-primary text-center">Base converter</h3>`;
-    document.getElementById('result-prompt').value = '';
-})
 
+    baseSelectPrompt.innerHTML = `<div data-aos="zoom-in">
+    <label for="base-selected">Select base :</label>
+    <select id="base-selected" class="form-select form-select-md mb-3"
+        aria-label=".form-select-lg example">
+        <option value="1">Binary</option>
+        <option value="2">Octal</option>
+        <option value="3">Hexa</option>
+    </select>
+    </div>`
+
+    convertBase.innerHTML = `<button onclick="convertBtnEvent()" data-aos="zoom-in" data-aos-delay="10" class=" btn btn-primary"><strong>Convert</strong></button>`
+}
 
 
 // Animation
 AOS.init();
+// id="convert-btn"

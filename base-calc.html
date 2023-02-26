@@ -29,18 +29,18 @@
         <div data-aos="zoom-in" class="base-prompt rounded 
         col-xl-5 col-lg-8 col-md-9 col-sm-10 col-10 p-4 my-auto">
 
-        <div id="title">
-            <h3 class="text-primary text-center">Base converter</h3>
-        </div>
+            <div id="title">
+                <h3 class="text-primary text-center">Base converter</h3>
+            </div>
 
-            <div class="py-3">
+            <div class="py-2" data-aos="zoom-in" data-aos-delay="10">
                 <label for="decimal-input">0-9 :</label>
-                <input id="decimal-input" placeholder="Enter your decimal number" class="form-control" type="text">
+                <input id="decimal-input" placeholder="Enter your decimal number" class="form-control bg-light" value="" type="number">
             </div>
             <div class="py-3">
 
                 <!-- Base input -->
-                <div id="base-input">
+                <div id="base-input" data-aos="zoom-in" data-aos-delay="10">
                     <label for="base-selected">Select base :</label>
                     <select id="base-selected" class="form-select form-select-md mb-3"
                         aria-label=".form-select-lg example">
@@ -50,19 +50,9 @@
                     </select>
                 </div>
 
-                <!-- Result -->
-                <div class="py-2" id="result">
-                    <label for="base">Result :</label>
-                    <input id="result-prompt" class="form-control" type="text">
-                </div>
-            </div>
-            <div class="d-flex justify-content-center">
-
-                <!-- covert btn -->
-                <button id="convert-btn" class=" btn btn-primary"><strong>Convert</strong></button>
-
-                <!-- reset btn -->
-                <button data-aos="fade-up" id="reset-btn" class=" btn btn-secondary"><strong>Reset</strong></button>
+            <!-- covert btn -->
+            <div id="convertBase" class="d-flex justify-content-center">
+                <button onclick="convertBtnEvent()"  data-aos="zoom-in" data-aos-delay="20" id="convert-btn" class=" btn btn-primary"><strong>Convert</strong></button>
             </div>
         </div>
         </div>
