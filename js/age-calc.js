@@ -38,9 +38,9 @@ const countAgeBtn = document.getElementById('count-age').addEventListener('click
         const ageInYears = ageInDays / 365;
 
         // Enabled row div
-        document.getElementById('age-result-row').style.display='block';
-        document.getElementById('age').setAttribute('data-aos',`fade-left`)
-        
+        document.getElementById('age-result-row').style.display = 'block';
+        document.getElementById('age').setAttribute('data-aos', `fade-left`)
+
         // DOM
         document.getElementById('age').innerHTML = `<div data-aos="fade-left"
         class="w-100 rounded age-prompt">
@@ -152,7 +152,16 @@ const countAgeBtn = document.getElementById('count-age').addEventListener('click
 
 // Download PDF Btn 
 const generatePDF = () => {
-    alert('')
+    var element = document.getElementById('invoice');
+    var opt = {
+        margin: 1,
+        filename: 'calc-land.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+    //  html2pdf(element); 
+    var worker = html2pdf().set(opt).from(element).save();
 }
 
 // Animation

@@ -21,7 +21,7 @@ const convertBtnEvent = () => {
             <button data-aos="zoom-in" onclick="resetBtnEvent()" class="btn btn-warning mt-2 px-4"><strong>Reset</strong></button>`
 
         baseSelectPrompt.innerHTML = `
-    <div class="py-2" data-aos="zoom-in" data-aos-delay="10"><label for="base">Result :</label>
+    <div class="py-2" data-aos="fade-right" data-aos-delay="10"><label for="base">Result :</label>
     <div class="row">
     <div class="col-10"><input id="result-prompt" class="form-control" type="text"></div>
     <div class="col-2"><button onclick="copyBtnEvent('result-prompt')" class="btn btn-secondary ">Copy</button></div>
@@ -61,7 +61,7 @@ const resetBtnEvent = () => {
     // DOM reset
     title.innerHTML = `<h3 class="text-primary text-center">Base converter</h3>`;
 
-    baseSelectPrompt.innerHTML = `<div data-aos="zoom-in">
+    baseSelectPrompt.innerHTML = `<div data-aos="fade-left">
     <label for="base-selected">Select base :</label>
     <select id="base-selected" class="form-select form-select-md mb-3"
         aria-label=".form-select-lg example">
@@ -71,7 +71,7 @@ const resetBtnEvent = () => {
     </select>
     </div>`
 
-    convertBase.innerHTML = `<button onclick="convertBtnEvent()" data-aos="zoom-in" data-aos-delay="10" class=" btn btn-primary"><strong>Convert</strong></button>`
+    convertBase.innerHTML = `<button onclick="convertBtnEvent()" data-aos="zoom-in" data-aos-delay="10" class="btn btn-primary"><strong>Convert</strong></button>`
 }
 
 
