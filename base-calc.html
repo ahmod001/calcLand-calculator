@@ -24,38 +24,89 @@
     </section>
 
     <!-- Base Converter -->
-    <section class="base-convereter-section row d-flex justify-content-center min-vh-100 ">
-        <!-- Decimal input -->
-        <div data-aos="zoom-in" class="base-prompt rounded 
-        col-xl-5 col-lg-8 col-md-9 col-sm-10 col-10 p-4 my-auto">
+    <section class="base-convereter-section min-vh-100 d-flex align-items-center px-2">
+        <div class="w-100 row">
 
-            <div id="title">
-                <h3 class="text-primary text-center">Base converter</h3>
-            </div>
+            <!-- Decimal input -->
+            <div class="col-md-7 px-lg-5 d-flex align-items-center justify-content-center py-3">
+                <div data-aos="fade-right" class="w-100  overflow-hidden base-prompt p-4 rounded">
+                    <div id="title">
+                        <h3 class="text-primary text-center">Base converter</h3>
+                    </div>
 
-            <div class="py-2" data-aos="zoom-in" data-aos-delay="10">
-                <label for="decimal-input">0-9 :</label>
-                <input id="decimal-input" placeholder="Enter your decimal number" class="form-control bg-light" value="" type="number">
-            </div>
-            <div class="py-3">
+                    <div class="py-2" data-aos="fade-right">
+                        <label for="decimal-input">0-9 :</label>
+                        <input id="decimal-input" placeholder="Enter your decimal number" class="form-control bg-light"
+                            value="" type="number">
+                    </div>
+                    <div class="py-3">
 
-                <!-- Base input -->
-                <div id="base-input" data-aos="zoom-in" data-aos-delay="10">
-                    <label for="base-selected">Select base :</label>
-                    <select id="base-selected" class="form-select form-select-md mb-3"
-                        aria-label=".form-select-lg example">
-                        <option value="1">Binary</option>
-                        <option value="2">Octal</option>
-                        <option value="3">Hexa</option>
-                    </select>
+                        <!-- Base input -->
+                        <div id="base-input" data-aos="fade-right">
+                            <label for="base-selected">Select base :</label>
+                            <select id="base-selected" class="form-select form-select-md mb-3"
+                                aria-label="form-select-lg example">
+                                <option value="1">Binary</option>
+                                <option value="2">Octal</option>
+                                <option value="3">Hexa</option>
+                            </select>
+                        </div>
+
+                        <!-- covert btn -->
+                        <div id="convertBase" class="d-flex justify-content-center">
+                            <button onclick="convertBtnEvent()" data-aos="fade-right" id="convert-btn"
+                                class=" btn btn-primary"><strong>Convert</strong></button>
+                        </div>
+                    </div>
                 </div>
+                <div data-aos="fade-right">
 
-            <!-- covert btn -->
-            <div id="convertBase" class="d-flex justify-content-center">
-                <button onclick="convertBtnEvent()"  data-aos="zoom-in" data-aos-delay="20" id="convert-btn" class=" btn btn-primary"><strong>Convert</strong></button>
+                </div>
             </div>
-        </div>
-        </div>
+
+            <!-- Description -->
+            <div class=" col-md-5 p-2
+             d-flex align-items-md-center">
+                <div class="px-3 px-md-0 w-100 h-50" style="overflow-y: scroll; overflow-x: hidden;">
+                    <!-- How to use it -->
+                    <article data-aos="fade-left" class="py-2">
+                        <h4 class="text-center text-primary text-opacity-75">How it works</h4>
+                        <p>
+                        <ul>
+                            <li class="my-auto">
+                                Convert from decimal to destination base: divide the decimal with the base until the
+                                quotient is 0 and calculate the remainder each time. The destination base digits are the
+                                calculated remainders.
+                            </li>
+                        </p>
+                    </article>
+
+                    <!-- How it works -->
+                    <article class="py-4">
+                        <h4 class="text-center text-primary text-opacity-75">How to use it</h4>
+                        <p>
+                        <ul>
+                            <li class="py-2">
+                                Enter a decimal number.
+                            </li>
+                            <li>
+                                Click on the input field labeled "base select" to change the base. The default base is
+                                binary (0,1).
+                            </li>
+                            <li class="py-2">
+                                Click the "Convert" button to convert the entered decimal number to the selected base.
+                            </li>
+                            <li>
+                                To copy the result, click the "copy" button.
+                            </li>
+                            <li>
+                                To reset all fields, click the "Reset" button.
+                            </li>
+                        </ul>
+                        </p>
+                    </article>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Bootstrap JS -->

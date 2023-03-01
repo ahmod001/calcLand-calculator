@@ -37,91 +37,86 @@ const countAgeBtn = document.getElementById('count-age').addEventListener('click
         const ageInMonths = ageInDays / 30;
         const ageInYears = ageInDays / 365;
 
-        // Enabled row div
-        document.getElementById('age-result-row').style.display='block';
-        document.getElementById('age').setAttribute('data-aos',`fade-left`)
-        
         // DOM
-        document.getElementById('age').innerHTML = `<div data-aos="fade-left"
-        class="w-100 rounded age-prompt">
-        <div id="invoice">
+        document.getElementById('age').innerHTML = `
+        <div id="invoice" data-aos="fade-left">
             <div class="py-3" data-aos="fade-left">
-                <h3><span class="text-primary">Age </span>:
-                    <span class="display-5 fw-bold">${Math.floor(ageInYears)}</span>
-                    <span class="text-muted"> yr</span>
-                </h3>
+                <h5><span class="text-primary">Age </span>: 
+                    <span class="display-6 fw-bold">${Math.floor(ageInYears)}</span>
+                    <span class="text-muted"> Yr</span>
+                </h5>
             </div>
 
-            <div class="d-flex justify-content-center p-2">
-                <table class=" table w-75">
+            <div class="d-flex justify-content-center ">
+                <table class=" table border w-75">
                     <tbody data-aos="fade-left">
                     <!-- Month -->
                     <tr scope="row">
                         <td>
-                            <h5>
+                            <h6>
                                 <span class="text-primary">Months</span>
-                            </h5>
+                            </h6>
                         </td>
 
-                        <td >
-                            <h4>${Math.floor(ageInMonths)}</h4>
+                        <td>
+                            <h6>${Math.floor(ageInMonths)}</h6>
                         </td>
                     </tr>
                     <!-- Week -->
                     <tr scope="row">
                         <td>
-                            <h5>
+                            <h6>
                                 <span class="text-primary">Weeks</span>
-                            </h5>
+                            </h6>
                         </td>
                         <td>
-                            <h4>${Math.floor(ageInWeeks)}</h4>
+                            <h6>${Math.floor(ageInWeeks)}</h6>
                         </td>
                     </tr>
                     <!-- Days -->
                     <tr scope="row">
                         <td>
-                            <h5>
+                            <h6>
                                 <span class="text-primary">Days</span>
-                            </h5>
+                            </h6>
                         </td>
                         <td>
-                            <h4>${Math.floor(ageInDays)}</h4>
+                            <h6>${Math.floor(ageInDays)}</h6>
                         </td>
                     </tr>
 
                     <!-- Hr -->
                     <tr scope="row">
                         <td>
-                            <h5>
+                            <h6>
                                 <span class="text-primary">Hours</span>
-                            </h5>
+                            </h6>
                         </td>
                         <td>
-                            <h4>${Math.floor(ageInHrs)}</h4>
+                            <h6>${Math.floor(ageInHrs)}</h6>
                         </td>
                     </tr>
 
                     <!-- Min -->
                     <tr scope="row">
                         <td>
-                            <h5>
+                            <h6>
                                 <span class="text-primary">Minutes</span>
-                            </h5>
+                            </h6>
                         </td>
                         <td>
-                            <h4>${Math.floor(ageInMins)}</h4>
+                            <h6>${Math.floor(ageInMins)}</h6>
                         </td>
                     </tr>
                     <!-- Sec-->
                     <tr scope="row">
                         <td>
-                            <h5>
+                            <h6>
                                 <span class="text-primary">Seconds</span>
-                            </h5>
+                            </h6>
                         </td>
                         <td>
-                            <h4>${Math.floor(ageInSecs)}</h4>
+                            <h6>${Math.floor(ageInSecs)}</h6>
                         </td>
                     </tr>
                     </tbody>
@@ -129,8 +124,8 @@ const countAgeBtn = document.getElementById('count-age').addEventListener('click
             </div>
         </div>
         <!-- Download PDF Btn -->
-        <div class="pb-4">
-            <button  data-aos="fade-left" data-aos-delay="20" class="btn btn-primary" id="download-btn" onclick="generatePDF()">
+        <div class="pb-3">
+            <button data-aos="fade-left" class="btn btn-primary" id="download-btn" onclick="generatePDF()">
                 </span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="20" fill="currentColor"
                     class="bi bi-download" viewBox="0 0 16 16">
@@ -139,10 +134,8 @@ const countAgeBtn = document.getElementById('count-age').addEventListener('click
                     <path
                         d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
                 </svg>
-                Download PDF</button>
-        </div>
-    </div>
-    </div>`;
+                Download</button>
+        </div>`;
 
     } else {
         alert('Please, Enter date of birth !')
@@ -152,7 +145,16 @@ const countAgeBtn = document.getElementById('count-age').addEventListener('click
 
 // Download PDF Btn 
 const generatePDF = () => {
-    alert('')
+    var element = document.getElementById('invoice');
+    var opt = {
+        margin: 1,
+        filename: 'calcLand.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    }
+
+    html2pdf().set(opt).from(element).save();
 }
 
 // Animation
