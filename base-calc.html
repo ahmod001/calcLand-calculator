@@ -28,8 +28,8 @@
         <div class="w-100 row">
 
             <!-- Decimal input -->
-            <div class="col-md-6 col-lg-7 px-3 px-lg-5 d-flex align-items-center justify-content-center overflow-hidden">
-                <div data-aos="fade-right" class="w-100 base-prompt p-4 rounded">
+            <div class="col-md-7 px-lg-5 d-flex align-items-center justify-content-center py-3">
+                <div data-aos="fade-right" class="w-100  overflow-hidden base-prompt p-4 rounded">
                     <div id="title">
                         <h3 class="text-primary text-center">Base converter</h3>
                     </div>
@@ -63,12 +63,26 @@
 
                 </div>
             </div>
+
             <!-- Description -->
-            <div class=" col-md-6 col-lg-5 px-2
-             d-flex align-items-center justify-content-center">
+            <div class=" col-md-5 p-2
+             d-flex align-items-md-center">
                 <div class="px-3 px-md-0 w-100 h-50" style="overflow-y: scroll; overflow-x: hidden;">
                     <!-- How to use it -->
-                    <article class="pb-4" data-aos="fade-left">
+                    <article data-aos="fade-left" class="py-2">
+                        <h4 class="text-center text-primary text-opacity-75">How it works</h4>
+                        <p>
+                        <ul>
+                            <li class="my-auto">
+                                Convert from decimal to destination base: divide the decimal with the base until the
+                                quotient is 0 and calculate the remainder each time. The destination base digits are the
+                                calculated remainders.
+                            </li>
+                        </p>
+                    </article>
+
+                    <!-- How it works -->
+                    <article class="py-4">
                         <h4 class="text-center text-primary text-opacity-75">How to use it</h4>
                         <p>
                         <ul>
@@ -91,30 +105,9 @@
                         </ul>
                         </p>
                     </article>
-
-                    <!-- How it works -->
-                    <article class="" data-aos="fade-left">
-                        <h4 class="text-center text-primary text-opacity-75">How it works</h4>
-                        <p>
-                        <ul>
-                            <li class="py-3">
-                                Convert from source base to decimal (base 10 ) by multiplying each digit with the base
-                                raised to the power of the digit number (starting from right digit number 0): <br>
-                                <strong>decimal = ∑(digit×basedigit number)</strong>.
-                            </li>
-                            <li>
-                                Convert from decimal to destination base: divide the decimal with the base until the
-                                quotient is 0 and calculate the remainder each time. The destination base digits are the
-                                calculated remainders.
-                            </li>
-                        </ul>
-                        </p>
-                    </article>
                 </div>
             </div>
         </div>
-
-
     </section>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

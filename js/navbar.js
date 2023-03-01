@@ -1,9 +1,9 @@
 // Navbar ===
-
 document.getElementById('nav-bar').innerHTML = `
 <nav class="navbar navbar-expand-lg shadow-sm bg-primary fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand text-light px-xl-3" href="#">Calc<span class="">Land</span></a>
+        <a class="navbar-brand text-light px-xl-3" href="#"><img src="css/images/logo.png"  alt="" style="height:5vh;">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

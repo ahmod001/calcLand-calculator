@@ -30,22 +30,21 @@
     </section>
 
     <!-- Age Calculator -->
-    <section class=" px-2 age-calculate-section">
+    <section class=" px-2 age-calculate-section min-vh-100 d-flex align-items-center">
+        <div class="row w-100 py-1">
 
-        <div class="row min-vh-100">
             <!--Date of birth prompt -->
-            <div data-aos="zoom-in"
-                class="px-4 px-lg-4 px-xl-5 col-12 col-sm-11 col-md-10 col-lg-6 d-flex align-items-center mx-auto">
-
-                <div class="age-prompt rounded w-100 mx-auto px-5 py-4">
+            <div class=" col-md-7 col-xl-6 px-lg-5 
+                 d-flex align-items-center ">
+                <div data-aos="fade-right" class="age-prompt rounded w-100 p-4 overflow-hidden">
                     <div class="pb-5">
                         <h3 class="text-primary text-center">Age calculator</h3>
                     </div>
 
-                    <h6>Date of Birth :</h6>
-                    <div class="row pt-1">
+                    <h6 data-aos="fade-right" data-aos-duration="55">Date of Birth :</h6>
+                    <div class="row pt-1" data-aos="fade-right" data-aos-duration="55">
                         <!-- Date -->
-                        <div class="col-4 px-1" data-aos="zoom-in" data-aos-delay="120">
+                        <div class="col-4 px-1">
                             <div>
                                 <select id="date" class="form-select" title="tap to select Date"
                                     aria-label="select example">
@@ -86,7 +85,7 @@
                         </div>
 
                         <!-- Month -->
-                        <div class="col-4 px-1" data-aos="zoom-in" data-aos-delay="120">
+                        <div class="col-4 px-1">
                             <div>
                                 <select id="month" class="form-select form-select" title="tap to select month"
                                     aria-label="select example">
@@ -107,7 +106,7 @@
                         </div>
                         <!-- Year -->
 
-                        <div class="col-4 px-1" data-aos="zoom-in" data-aos-delay="120">
+                        <div class="col-4 px-1">
                             <div>
                                 <select id="year" class="form-select form-select" title="tap to select Year"
                                     aria-label="select example">
@@ -117,15 +116,36 @@
                         </div>
                     </div>
 
-                    <div class="text-center py-5" data-aos="zoom-in" data-aos-delay="150">
-                        <button id="count-age" class="btn btn-primary">Calculate</button>
+                    <div class="text-center py-5">
+                        <button data-aos="fade-right" data-aos-duration="55" id="count-age" class="btn btn-primary">Calculate</button>
                     </div>
                 </div>
             </div>
             <!-- Age result -->
-            <div id="age-result-row" class="col-12 col-sm-11 col-md-10 col-lg-6
-              py-2 mx-auto d-flex align-items-center py-5" style="display: none !important;">
-                <div id="age" class="w-100 text-center mx-auto py-3 px-3">
+            <div id="age-result-row" class=" col-md-5 col-xl-6 p-2
+            d-flex align-items-md-center">
+                <div id="age" class="w-100 text-center py-3 px-3">
+                    <!-- How it works -->
+                    <article class="py-4 text-start" data-aos="fade-left">
+                        <h4 class="text-center text-primary text-opacity-75">How to use it</h4>
+                        <p>
+                        <ul>
+                            <li class="py-2">
+                                Enter a Date of birth.
+                            </li>
+                            <li>
+                                Click on the input field labeled "Date of Birth" to enter the Date, Month & Year
+                                information..
+                            </li>
+                            <li class="py-2">
+                                After entering the information, click on the "Calculate" button to generate the result.
+                            </li>
+                            <li>
+                                To obtain a downloadable PDF of the result, click on the "Download" button.
+                            </li>
+                        </ul>
+                        </p>
+                    </article>
                 </div>
             </div>
         </div>
