@@ -1,19 +1,19 @@
 body {
     overflow-x: hidden;
 }
-
-button,
-#display-input {
-    box-shadow: grey 0px 5px 5px;
+/* Buttons */
+button {
+    box-shadow: rgb(155, 155, 155) 0px 5px 5px;
 }
-
+button:active {
+    transform: scale(.95);
+    box-shadow: none;
+}
 /* Navigation Bar */
-.calculator,
-.menue {
+.calculator {
 
     background-color: #ecf0f1;
     box-shadow: gray 0px 5px 7px;
-
 }
 
 .nav-list-item:active {
@@ -50,7 +50,7 @@ button,
     font-weight: 700 !important;
 }
 
-/* ACTIVE Button Animation*/
+/* SideBar > ACTIVE Button Animation*/
 @keyframes gradient {
     0% {
         background: radial-gradient(circle at center, rgb(3, 23, 53) 0%, #fff 0%, #fff 100%);

@@ -45,4 +45,4 @@ document.getElementById('btn-action-equal').addEventListener('click', () => {
 
 
 // Animation
-AOS.init();
+AOS.init({ once: true });

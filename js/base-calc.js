@@ -17,15 +17,22 @@ const convertBtnEvent = () => {
 
     // Change the prompt
     if (decimalInput.value >= 0 && decimalInput.value != '') {
-        convertBase.innerHTML = ` 
-            <button data-aos="zoom-in" onclick="resetBtnEvent()" class="btn btn-warning mt-2 px-4"><strong>Reset</strong></button>`
+        convertBase.innerHTML = `
+            <div class="row" data-aos="zoom-in">
+                <div class="col-6">
+                    <button onclick="resetBtnEvent()"class="btn btn-warning px-4">Reset</button>
+                </div>
+                <div class="col-6">
+                    <button onclick="copyBtnEvent('result-prompt')"
+                    class="btn btn-secondary px-4">Copy</button>
+                </div>
+            </div>`;
 
         baseSelectPrompt.innerHTML = `
-    <div class="py-2" data-aos="fade-right" data-aos-delay="10"><label for="base">Result :</label>
-    <div class="row">
-    <div class="col-10"><input id="result-prompt" class="form-control" type="text"></div>
-    <div class="col-2"><button onclick="copyBtnEvent('result-prompt')" class="btn btn-secondary ">Copy</button></div>
-    </div>`
+    <div class="py-2" data-aos="fade-right" data-aos-delay="10">
+    <label for="base">Result :</label>
+        <input id="result-prompt" class="form-control" type="text">
+    </div>`;
 
         // DOM
         title.innerHTML = `<h3 class="text-center">Base <span class ="text-primary ">converted</span></h3>`;
@@ -47,7 +54,7 @@ const copyBtnEvent = (id) => {
     if (copyText.value != '' && copyText.value >= 0) {
         copyText.select();
         copyText.setSelectionRange(0, 99999);
-        navigator.clipboard.writeText(copyText.value);
+        navigator.clipboard.writeText(`${copyText.value}\nhttps://ahmod001.github.io/calculator/index.html`);
 
         alert("Copied");
     }
@@ -74,7 +81,5 @@ const resetBtnEvent = () => {
     convertBase.innerHTML = `<button onclick="convertBtnEvent()" data-aos="zoom-in" data-aos-delay="10" class="btn btn-primary"><strong>Convert</strong></button>`
 }
 
-
 // Animation
-AOS.init();
-// id="convert-btn"
+AOS.init({ once: true });

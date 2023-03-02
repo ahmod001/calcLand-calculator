@@ -1,8 +1,8 @@
 // Navbar ===
 document.getElementById('nav-bar').innerHTML = `
-<nav class="navbar navbar-expand-lg shadow-sm bg-primary fixed-top">
+<nav class="navbar navbar-expand-lg shadow-sm z-3 bg-primary fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand text-light px-xl-3" href="#"><img src="css/images/logo.png"  alt="" style="height:5vh;">
+        <a class="navbar-brand text-light px-xl-3" href="index.html"><img src="css/images/logo.png" alt="" style="height:5vh;">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

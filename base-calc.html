@@ -28,7 +28,7 @@
         <div class="w-100 row">
 
             <!-- Decimal input -->
-            <div class="col-md-7 px-lg-5 d-flex align-items-center justify-content-center py-3">
+            <div class="col-md-6 px-md-5 d-flex align-items-center justify-content-center py-3">
                 <div data-aos="fade-right" class="w-100  overflow-hidden base-prompt p-4 rounded">
                     <div id="title">
                         <h3 class="text-primary text-center">Base converter</h3>
@@ -53,23 +53,21 @@
                         </div>
 
                         <!-- covert btn -->
-                        <div id="convertBase" class="d-flex justify-content-center">
+                        <div id="convertBase" class="d-flex justify-content-center pt-1">
                             <button onclick="convertBtnEvent()" data-aos="fade-right" id="convert-btn"
-                                class=" btn btn-primary"><strong>Convert</strong></button>
+                                class=" btn btn-primary"><strong>Convert</strong>
+                            </button>
                         </div>
                     </div>
-                </div>
-                <div data-aos="fade-right">
-
                 </div>
             </div>
 
             <!-- Description -->
-            <div class=" col-md-5 p-2
+            <div class=" col-md-6 p-2
              d-flex align-items-md-center">
-                <div class="px-3 px-md-0 w-100 h-50" style="overflow-y: scroll; overflow-x: hidden;">
+                <div class="px-3 px-md-0 w-100 h-100" data-aos="fade-left">
                     <!-- How to use it -->
-                    <article data-aos="fade-left" class="py-2">
+                    <article class="py-2">
                         <h4 class="text-center text-primary text-opacity-75">How it works</h4>
                         <p>
                         <ul>
@@ -78,7 +76,7 @@
                                 quotient is 0 and calculate the remainder each time. The destination base digits are the
                                 calculated remainders.
                             </li>
-                        </p>
+                            </p>
                     </article>
 
                     <!-- How it works -->
@@ -109,6 +107,10 @@
             </div>
         </div>
     </section>
+       <!-- Footer -->
+       <footer id="footer">
+        <script src="js/footer.js"></script>
+    </footer>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
