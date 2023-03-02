@@ -21,4 +21,4 @@ const measureBtn = document.getElementById('measure-btn').addEventListener('clic
 })
 
 // Animation
-AOS.init();
+AOS.init({ once: true });
