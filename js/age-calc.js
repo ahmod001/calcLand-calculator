@@ -15,18 +15,17 @@ IncrementYear();
 // Calculate Btn event
 const countAgeBtn = document.getElementById('count-age').addEventListener('click', () => {
     const birthDate = new Date();
-
     // Formate date
     const birthDay = Number.parseInt(document.getElementById('date').value);
     const birthMonth = Number.parseInt(document.getElementById('month').value);
     const birthYear = Number.parseInt(document.getElementById('year').value);
 
     birthDate.setDate(birthDay);
-    birthDate.setMonth(birthMonth);
+    birthDate.setMonth(birthMonth - 1);
     birthDate.setFullYear(birthYear);
 
-    // const difference = new Date().getTime() - birthDate.getTime();
-    let difference = Date.now() - Date.parse(birthDate)
+    const today = new Date();
+    let difference = today.getTime() - birthDate.getTime();
 
     if (difference >= 86400000) {
 
@@ -36,13 +35,13 @@ const countAgeBtn = document.getElementById('count-age').addEventListener('click
         const ageInHrs = Math.floor(ageInMins / 60);
         const ageInDays = Math.floor(ageInHrs / 24);
         const ageInWeeks = Math.floor(ageInDays / 7);
-        const ageInMonths = Math.floor(ageInDays / 30);
+        const ageInMonths = (today.getMonth() + 12 * today.getFullYear()) - (birthDate.getMonth() + 12 * birthDate.getFullYear());
         const ageInYears = Math.floor(ageInDays / 365);
 
         // Result age 
-        let year = Math.floor(ageInDays / 365)
-        const month = Math.floor(ageInDays % 365 / 30)
-        const days = (ageInDays % 365) % 30
+        let year = Math.floor(ageInDays / 365);
+        const month = (ageInMonths + 12) % 12;
+        const days = today.getDate() - birthDate.getDate();
 
         // DOM
         document.getElementById('age').innerHTML = `
