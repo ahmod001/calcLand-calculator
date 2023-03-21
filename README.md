@@ -13,17 +13,19 @@ CalcLand is a user-friendly calculator website with multiple tools that simplify
 
 * HTML: The markup language used for creating the website's structure.
 * CSS: The styling language used for designing the website's layout and visual appearance.
+* Bootstrap: The CSS framework used for better interface.
 * JavaScript: The programming language used for adding interactivity and performing mathematical computations.
 
 ## How to Use
 
-1. Visit the CalcLand website at https://yourwebsite.com/calcland.
+1. Visit the CalcLand website at  https://ahmod001.github.io/calcLand-calculator/.
 2. Choose the tool you need from the navigation menu on the left.
 3. Enter the required input values in the provided fields.
 4. Click the "Calculate" button to see the result.
-5. If necessary, use the "Reset" button to clear the input fields and start over.
+5. Click the "Copy" button to copy the result in clapboard.
+6. If necessary, use the "Reset" button to clear the input fields and start over.
 
 ## Credits
 
-The CalcLand website was created by Hasan and is licensed under the MIT License.
+The CalcLand website was created by Hasan.
 
