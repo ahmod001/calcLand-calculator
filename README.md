@@ -25,8 +25,4 @@ CalcLand is a user-friendly calculator website with multiple tools that simplify
 5. Click the "Copy" button to copy the result in clapboard.
 6. If necessary, use the "Reset" button to clear the input fields and start over.
 
-## Credits
-
-The CalcLand website was created by Hasan.
-
-**Feel free to modify and customize this description as per your preferences and requirements. Good luck with your project!**
+©2023 Developed by Ahmod Hasan
